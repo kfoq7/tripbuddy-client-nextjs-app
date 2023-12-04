@@ -3,7 +3,7 @@ import { Title } from '@/components/ui/title'
 import NoQuotes from '@/components/no-quotes'
 import { Button } from '@/components/ui/button'
 
-const quotesList = []
+const quotesList: unknown[] = []
 
 export default function Quotes() {
   const isEmpty = quotesList.length === 0
