@@ -1,4 +1,4 @@
-import { Title } from './ui/title'
+import { Title } from './ui'
 
 export default function NoQuotes() {
   return (

@@ -1,7 +1,6 @@
 import clsx from 'clsx'
-import { Title } from '@/components/ui/title'
 import NoQuotes from '@/components/no-quotes'
-import { Button } from '@/components/ui/button'
+import { Title, Button } from '@/components/ui'
 
 const quotesList: unknown[] = []
 

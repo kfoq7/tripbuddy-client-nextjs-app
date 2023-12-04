@@ -1,5 +1,5 @@
 import CardActiviy from './card-activity'
-import { Title } from './ui/title'
+import { Title } from './ui'
 import { activies, categories } from '@/lib/data'
 
 export default function SelectActivies() {

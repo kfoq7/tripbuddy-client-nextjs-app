@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Title } from '@/components/ui/title'
+import { Title, Button } from '@/components/ui'
 import { recolatedData } from '@/lib/data'
-import { Button } from '@/components/ui/button'
 
 export default function VisualiztionSelection() {
   const { description } = recolatedData

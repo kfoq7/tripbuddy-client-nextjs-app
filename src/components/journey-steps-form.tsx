@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { Button } from './ui/button'
+import { Button } from './ui'
 import { useMultistepsForm } from '@/hooks/useMultistepsForm'
 import SelectTrip from './select-trip'
 import SelectData from './select-data'

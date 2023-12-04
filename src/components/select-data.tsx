@@ -1,12 +1,5 @@
-import { AmountInput } from './ui/amount-input'
-import { SelectInput } from './ui/select-input'
-import { Input } from './ui/input'
-import { Button } from './ui/button'
-import { Title } from './ui/title'
-import { Person } from './icons/Person'
-import { Question } from './icons/question'
-import { LocationOn } from './icons/LocationOn'
-import { RequestCash } from './icons/RequestCash'
+import { AmountInput, SelectInput, Input, Button, Title } from './ui'
+import { Person, Question, LocationOn, RequestCash } from './icons'
 
 export default function SelectData() {
   return (

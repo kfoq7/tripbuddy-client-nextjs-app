@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { useState } from 'react'
-import { Title } from './ui/title'
+import { Title } from './ui'
 import { countWords, countCharatares } from '@/lib/utils'
 
 export default function SelectDetails() {

@@ -1,4 +1,11 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import { Title } from '@/components/ui'
+import { ArrowRight } from '@/components/icons'
+
+const LocalImage = ({ name }: { name: string }) => (
+  <Image src={`/images/${name}.png`} alt={name} width={150} height={100} />
+)
 
 export default function Home() {
   return (
@@ -11,6 +18,26 @@ export default function Home() {
           <span className="pointer-events-none">Comienza tu viaje</span>
         </Link>
       </div>
+
+      <section className="bg-white pt-8 pb-8">
+        <div className="max-w-7xl mx-auto">
+          <Title className="text-xl">
+            Crea el viaje de tus sueños en 5 sencillos pasos
+          </Title>
+
+          <div className="flex items-center justify-center gap-6 pt-8">
+            <LocalImage name="paso1" />
+            <ArrowRight />
+            <LocalImage name="paso2" />
+            <ArrowRight />
+            <LocalImage name="paso3" />
+            <ArrowRight />
+            <LocalImage name="paso4" />
+            <ArrowRight />
+            <LocalImage name="paso5" />
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
