@@ -2,6 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Title } from '@/components/ui'
 import { ArrowRight } from '@/components/icons'
+import Cardtrip from '@/components/card-trip'
+import { trips } from '@/lib/data'
+import Footer from '@/components/footer'
 
 const LocalImage = ({ name }: { name: string }) => (
   <Image src={`/images/${name}.png`} alt={name} width={150} height={100} />
@@ -38,6 +41,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="bg-gray-50 pt-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center justify-center">
+            <Title className="text-gray-700 text-3xl font-bold">
+              Viajes de otro usuarios
+            </Title>
+
+            <div className="flex items-center justify-center gap-3 pt-6">
+              {trips.map(({ id }) => (
+                <Cardtrip key={id} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </main>
   )
 }
