@@ -9,7 +9,7 @@ interface Props {
 
 export default function Cardtrip({ title, name, thumbnail }: Props) {
   return (
-    <div className="bg-red-300 rounded-md shadow-lg">
+    <div className="bg-gray-100 rounded-md shadow-lg">
       <div className="relative inline-block">
         <Image
           src={`/images/${thumbnail}.png`}
