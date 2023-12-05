@@ -50,10 +50,15 @@ export default function Home() {
               Viajes de otro usuarios
             </Title>
 
-            <div className="max-w-4xl mx-auto my-72">
+            <div className="max-w-4xl mx-auto mt-5 mb-16">
               <div className="flex items-center justify-center gap-3 pt-6">
-                {trips.map(({ id, name, image }) => (
-                  <Cardtrip key={id} name={name} thumbnail={image} />
+                {trips.map(({ id, name, image, title }) => (
+                  <Cardtrip
+                    key={id}
+                    name={name}
+                    thumbnail={image}
+                    title={title}
+                  />
                 ))}
               </div>
             </div>
