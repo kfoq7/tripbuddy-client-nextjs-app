@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Title } from '@/components/ui'
 import { ArrowRight } from '@/components/icons'
 import Cardtrip from '@/components/card-trip'
-import { trips } from '@/lib/data'
 import Footer from '@/components/footer'
+import { trips } from '@/lib/data'
 
 const LocalImage = ({ name }: { name: string }) => (
   <Image src={`/images/${name}.png`} alt={name} width={150} height={100} />
@@ -12,8 +12,11 @@ const LocalImage = ({ name }: { name: string }) => (
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-[95px]">
       <div className="h-[500px] w-full bg-no-repeat bg-cover bg-center bg-[url(/images/bg-empieza-viaje.png)] flex flex-col items-center justify-center gap-4 font-bold text-center text-4xl text-white">
+        <Title className="text-white text-3xl">
+          Unete a nuestra comidad y planea tu viaje a la medida
+        </Title>
         <Link
           className="bg-sky-400 px-[58px] py-2 text-2xl text-center font-light tracking-normal rounded-md cursor-pointer hover:bg-sky-500"
           href="/start-journey"
@@ -22,11 +25,9 @@ export default function Home() {
         </Link>
       </div>
 
-      <section className="bg-white pt-8 pb-8">
+      <section className="bg-white my-20 pb-8">
         <div className="max-w-7xl mx-auto">
-          <Title className="text-xl">
-            Crea el viaje de tus sueños en 5 sencillos pasos
-          </Title>
+          <Title>Crea el viaje de tus sueños en 5 sencillos pasos</Title>
 
           <div className="flex items-center justify-center gap-6 pt-8">
             <LocalImage name="paso1" />
@@ -49,10 +50,12 @@ export default function Home() {
               Viajes de otro usuarios
             </Title>
 
-            <div className="flex items-center justify-center gap-3 pt-6">
-              {trips.map(({ id }) => (
-                <Cardtrip key={id} />
-              ))}
+            <div className="max-w-4xl mx-auto my-72">
+              <div className="flex items-center justify-center gap-3 pt-6">
+                {trips.map(({ id, name, image }) => (
+                  <Cardtrip key={id} name={name} thumbnail={image} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

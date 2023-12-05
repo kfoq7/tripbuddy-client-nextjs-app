@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Button } from './ui'
 
 export default function Header() {
@@ -11,8 +12,13 @@ export default function Header() {
             </h2>
           </a>
           <div className="flex items-center gap-4">
-            <Button>Inciar sesion</Button>
-            <Button>Registro</Button>
+            <Button>Iniciar sesion</Button>
+            <Link
+              href="/register"
+              className="w-36 px-5 py-2 bg-sky-400 rounded-md text-white text-center tracking-normal hover:bg-sky-500"
+            >
+              Registro
+            </Link>
           </div>
         </nav>
       </div>

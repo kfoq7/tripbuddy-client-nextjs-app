@@ -88,7 +88,7 @@ export const trips = [
     id: 1,
     name: 'lima',
     title: 'Lima',
-    image: '/images/img-ciudad-lima.png'
+    image: 'img-ciudad-lima'
   },
   {
     id: 2,
